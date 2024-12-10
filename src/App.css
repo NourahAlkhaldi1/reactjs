@@ -1,0 +1,73 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #1c1c3c, #30306a, #1f1c2c);
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Background Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Particles */
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  top: 10%;
+  left: 20%;
+  animation-duration: 8s;
+  animation-delay: -2s;
+}
+
+.particle:nth-child(2) {
+  width: 30px;
+  height: 30px;
+  top: 40%;
+  left: 50%;
+  animation-duration: 10s;
+  animation-delay: -3s;
+}
+
+.particle:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  bottom: 20%;
+  right: 10%;
+  animation-duration: 12s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-20px) translateX(10px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+span {
+  color: aliceblue;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+}
